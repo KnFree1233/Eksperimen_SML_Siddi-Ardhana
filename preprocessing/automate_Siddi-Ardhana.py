@@ -43,4 +43,5 @@ for column in category_columns:
     df_encoded[column] = LabelEncoder().fit_transform(df_encoded[column])
 
 # Menyimpan Dataset Hasil Preprocessing
-df_encoded.to_csv('covid19-patient-symptoms-diagnosis_preprocessing.csv', index=False)
+output_path = curr_dir / 'covid19-patient-symptoms-diagnosis_preprocessing.csv'
+df_encoded.to_csv(output_path, index=False)
